@@ -1,0 +1,18 @@
+body,html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls .d-flex button{
+    width: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.controls .d-flex{
+    justify-content: space-between;
+}
