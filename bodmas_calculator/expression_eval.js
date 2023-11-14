@@ -118,7 +118,8 @@ function evaluate(exp){
 }
 document.getElementById('eval_form').addEventListener('submit',function(e){
     e.preventDefault();
-    document.getElementById('result').value=evaluate(document.getElementById('exp').value);
+    let cal_val=evaluate(document.getElementById('exp').value);
+    document.getElementById('result').value=cal_val!=null?cal_val:"Please provide a valid expression!";
 })
 function handleKeyInputs(e) {
     document.getElementById('exp').value+=e.getAttribute('data-key-value');

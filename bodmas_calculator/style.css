@@ -16,3 +16,8 @@ body{
 .controls .d-flex{
     justify-content: space-between;
 }
+.operator-btn{
+    font-size: 1.5rem;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+}
