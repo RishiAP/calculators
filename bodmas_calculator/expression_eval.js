@@ -71,7 +71,9 @@ function break_into_tokens(exp){
     let number="";
     let arr=[];
     for (let i = 0; i < exp.length; i++) {
-        if(isDigit(exp[i]) || (number.indexOf('.')==-1 && exp[i]=='.' && isDigit(exp[i-1]) && isDigit(exp[i+1])))
+        if((exp[i]=='-' || exp[i]=='+') && (exp[i-1]==null || isBracesOpen(exp[i-1])))
+        number=exp[i]+"";
+        else if(isDigit(exp[i]) || (number.indexOf('.')==-1 && exp[i]=='.' && isDigit(exp[i-1]) && isDigit(exp[i+1])))
         number+=exp[i];
         else{
             if(number!==""){
